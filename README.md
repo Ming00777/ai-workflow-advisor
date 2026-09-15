@@ -18,6 +18,42 @@
 - `tool-recommendation`：根据用户明确的工作目标与画像，从目录中推荐 CLI、MCP 和 Agent，解释推荐理由和不推荐原因。
 - `setup-guide`：为已选工具生成官方安装、授权、只读验证和卸载步骤。遇到没有稳定官方入口的项目，明确标为社区项目或仅提供产品介绍。
 
+## 安装
+
+### 使用 Skills CLI
+
+```bash
+npx skills add Ming00777/ai-workflow-advisor
+```
+
+如果只想安装用户入口 Skill：
+
+```bash
+npx skills add Ming00777/ai-workflow-advisor --skill ai-workflow-advisor
+```
+
+全局安装到当前用户的 Agent 环境：
+
+```bash
+npx skills add Ming00777/ai-workflow-advisor --skill ai-workflow-advisor --global
+```
+
+### 也可以让 Agent 安装
+
+将下面这句话发送给支持 Skills 的 Agent：
+
+```text
+安装这个 Skill：https://github.com/Ming00777/ai-workflow-advisor/tree/main/skills/ai-workflow-advisor
+```
+
+安装完成后，可以这样开始：
+
+```text
+帮我分析当前工作区适合安装哪些 CLI、MCP 和 Agent，先只读扫描，不要安装。
+```
+
+`npx skills add` 的参数格式参考开放 Skills CLI 文档；安装前请检查仓库内容、权限范围和目标 Agent。该命令会从 GitHub 获取文件，具体安装位置由 CLI 和 `--global` 选项决定。
+
 ## 首批目录
 
 | 类型 | 项目 | 状态 |
