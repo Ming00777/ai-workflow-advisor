@@ -1,0 +1,46 @@
+schema_version: 1
+verified_at: 2026-09-15
+items:
+  - id: lark-cli
+    name: 飞书 / Lark CLI
+    type: cli
+    status: official
+    fit: [feishu-docs, sheets, bitable, calendar, mail, tasks, ai-agents]
+    source: https://github.com/larksuite/cli
+    docs: https://github.com/larksuite/cli#readme
+    install_hint: "Follow the repository's current release or package-manager instructions; do not hard-code a stale command."
+    permissions: "Feishu Open Platform scopes selected by the user; may include documents, spreadsheets, messages, calendar, or mail."
+    notes: "The repository describes 200+ commands and AI-agent-oriented capabilities. Verify the current release before installation."
+
+  - id: kimi-code-cli
+    name: Kimi Code CLI
+    type: cli
+    status: official
+    fit: [coding, local-files, terminal-automation, web-research]
+    source: https://www.kimi.com/code/docs/
+    docs: https://www.kimi.ai/help/kimi-code/cli-getting-started
+    install_hint: "Use the official installer or npm instructions in the current documentation."
+    permissions: "Local files and terminal actions depend on user approvals; account or API access is required."
+    notes: "The official docs describe a terminal agent that can read/edit files, run commands, search and fetch web pages."
+
+  - id: tencent-codebuddy-cli
+    name: 腾讯云 CodeBuddy CLI
+    type: cli
+    status: official
+    fit: [coding, mcp-management, hooks, cloud-development]
+    source: https://www.codebuddy.cn/
+    docs: https://staging-codebuddy.tencent.com/docs/cli/reference
+    install_hint: "Use the current CodeBuddy download and CLI documentation; this catalog does not execute installation."
+    permissions: "Project files, shell commands, and any MCP credentials explicitly configured by the user."
+    notes: "The official reference documents commands such as MCP listing; re-check the stable documentation URL before release."
+
+  - id: baidu-netdisk-cli-community
+    name: 百度网盘 CLI（社区项目候选）
+    type: cli
+    status: community
+    fit: [cloud-storage, file-upload, file-download, backup]
+    source: https://github.com/wxnacy/bdpan-cli
+    docs: https://github.com/wxnacy/bdpan-cli#readme
+    install_hint: "Review source, release activity, token storage, and license before using a community CLI."
+    permissions: "Baidu Netdisk account and file access; token handling differs by project."
+    notes: "No vendor-maintained official CLI was verified in this research. Never label this project as Baidu official."

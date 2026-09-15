@@ -1,0 +1,46 @@
+schema_version: 1
+verified_at: 2026-09-15
+items:
+  - id: coze-docs-mcp
+    name: 扣子官方文档 MCP
+    type: mcp
+    status: official
+    transport: streamable-http-or-sse
+    fit: [coze, product-docs, documentation-search]
+    source: https://docs.coze.cn/mcp
+    endpoint: https://docs.coze.cn/topic-api/mcp
+    permissions: "The connected Agent may send queries to the Coze documentation service. Review third-party MCP data handling before use."
+    notes: "The official docs publish the endpoint and explain connection and verification."
+
+  - id: feishu-open-platform-mcp
+    name: 飞书开放平台能力（通过 CLI / 应用配置）
+    type: mcp
+    status: official-or-configured
+    transport: varies
+    fit: [feishu-docs, sheets, bitable, calendar, messages]
+    source: https://github.com/larksuite/cli
+    docs: https://open.feishu.cn/document/
+    permissions: "Only the scopes granted to the user's Feishu application; treat document and message access as sensitive."
+    notes: "Do not invent a single public MCP endpoint. Recommend the official CLI or the user's chosen Feishu integration path."
+
+  - id: codebuddy-mcp-management
+    name: CodeBuddy MCP 管理能力
+    type: mcp
+    status: official
+    transport: varies
+    fit: [coding, mcp-management, cloud-development]
+    source: https://www.codebuddy.cn/
+    docs: https://staging-codebuddy.tencent.com/docs/cli/reference
+    permissions: "Depends on each configured MCP; inspect server source and credentials before connecting."
+    notes: "The official reference documents MCP management commands. The catalog does not treat CodeBuddy as a universal MCP server."
+
+  - id: filesystem-mcp
+    name: 文件系统 MCP（通用能力）
+    type: mcp
+    status: needs-verification
+    transport: stdio
+    fit: [local-documents, local-files, agent-workflows]
+    source: https://modelcontextprotocol.io/
+    docs: https://modelcontextprotocol.io/
+    permissions: "Potentially reads and writes user-selected local directories. Require an explicit allowlist."
+    notes: "A concrete implementation must be selected and reviewed; this catalog entry is a capability category, not an install command."

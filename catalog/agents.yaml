@@ -1,0 +1,46 @@
+schema_version: 1
+verified_at: 2026-09-15
+items:
+  - id: coze-agent
+    name: 扣子 Agent
+    type: agent
+    status: official
+    fit: [office, research, data-analysis, content, multi-agent]
+    source: https://docs.coze.cn/cozespace_coze_agent
+    docs: https://docs.coze.cn/
+    setup: "Use the official web or desktop product. Add MCPs from the user's selected source and verify each connection."
+    permissions: "Depends on attached files, plugins, Skills, and MCPs."
+    notes: "Official docs describe custom Agents and extension through Skills, MCP, and plugins."
+
+  - id: tencent-workbuddy
+    name: 腾讯 WorkBuddy
+    type: agent
+    status: official-product
+    fit: [office, local-files, research, documents, spreadsheets, multi-agent]
+    source: https://cloud.tencent.com/product/workbuddy
+    docs: https://cloud.tencent.com/document/product/1831/134384
+    setup: "Use the official product download or online experience. This catalog does not claim a public standalone CLI."
+    permissions: "Can operate user-authorized local files and configured integrations; review the product's current permission controls."
+    notes: "Treat this as an Agent product recommendation, not a CLI or public MCP endpoint."
+
+  - id: qwen-office-candidate
+    name: 通义灵码 / 通义千问办公候选
+    type: agent
+    status: needs-verification
+    fit: [office, coding, documents, spreadsheets]
+    source: https://tongyi.aliyun.com/lingma
+    docs: https://help.aliyun.com/
+    setup: "Recommend only after the current official product and integration docs are confirmed."
+    permissions: "Varies by product and account; do not infer from the model brand."
+    notes: "The initial research did not establish one stable official 'Qwen office Agent' CLI or MCP entry. Keep this candidate visible without inventing setup instructions."
+
+  - id: kimi-code-agent
+    name: Kimi Code
+    type: agent
+    status: official
+    fit: [coding, local-files, terminal-automation, research]
+    source: https://www.kimi.com/code/docs/
+    docs: https://www.kimi.ai/help/kimi-code/cli-getting-started
+    setup: "Use the official Kimi Code CLI or supported client documented by Moonshot."
+    permissions: "User-approved local files, terminal commands, web access, and account/API usage."
+    notes: "The Agent and CLI overlap; show one recommendation with both entry paths rather than duplicating it."
